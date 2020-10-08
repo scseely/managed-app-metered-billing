@@ -1,0 +1,11 @@
+### Requirements
+msal
+azure-core
+azure-identity
+azure-mgmt-subscription
+azure-mgmt-resource
+msrest
+
+
+### Testing packages
+pytest

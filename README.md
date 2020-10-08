@@ -13,7 +13,38 @@ to add:
 Those bits are dependent on what your application charges for and how you collect the data. 
 Getting that right will be far more complex than what is demonstrated here.
 
+
 To setup the project, do the following:
+
+ON LINUX:
+---------
+1. Make sure you have python3 and virtualenv installed. 
+yum install python3
+yum install python-virtualenv
+
+2. From the root of the project, setup the venv 
+virtualenv -p /usr/bin/python venv
+
+3. Activate the virtual environment
+
+source  venv/bin/activate  
+
+4. Pull in the required python projects
+
+ pip install -r ./requirements.txt
+
+5. Run-- please keep in mind that this code will attempt to set dim1 on all deployments.
+If you have different dimension names, these calls will all fail.
+
+cd ./managed-app-metered-billing
+python main.py --tenant-id <your tenant id> \
+    --client-id <your client id> \
+    --client-secret <your client secret> \
+    --offer-id <your offer-id> \
+    --plan-id <your plan-id>
+
+ON Windows:
+------------
 
 1. From the root of the project, setup the venv
 
